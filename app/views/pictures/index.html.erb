@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+<div class="page_name">
+  <h1><%= link_to 'College Corner' %></h1>
+  <p><%= link_to 'Add School +', new_picture_path %></p>
+</div>
+
+<table>
+  <thead>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+
+    <tbody class="pictures">
+      <% @pictures.each do |picture| %>
+        <tr>
+          <!-- <td id="title"><%= picture.title %></td> -->
+          <!-- <td id="picture"><%= image_tag picture.url if picture.url? %></td> -->
+          <td id="picture"><%= image_tag picture.url %></td>
+          <!-- <td id="show"><%= link_to 'Show', picture %></td> -->
+          <!-- <td><%= link_to 'Edit', edit_picture_path(picture) %></td> -->
+          <!-- <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+        </tr>
+      <% end %>
+    </tbody>
+
+</table>
+
+<br>
+
+<!-- <h3 class="footer"><%= link_to 'Back To Top' %></h1> -->
+
+<div class="footer">
+  <p>© 2017 College Corner, Inc.</p>
+  <p><%= link_to 'Back To Top ^' %></p>
+</div>
