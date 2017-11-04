@@ -18,8 +18,13 @@
         <tr>
           <!-- <td id="title"><%= picture.title %></td> -->
           <!-- <td id="picture"><%= image_tag picture.url if picture.url? %></td> -->
-          <td id="picture"><%= image_tag picture.url %></td>
-          <!-- <td id="show"><%= link_to 'Show', picture %></td> -->
+          <!-- <td id="picture"><%= image_tag picture.url %></td> -->
+          <td id="picture">
+            <%= link_to picture do %>
+              <%= image_tag picture.url %>
+            <% end %>
+          </td>
+          <!-- <td id="show"><%= link_to 'show', picture %></td> -->
           <!-- <td><%= link_to 'Edit', edit_picture_path(picture) %></td> -->
           <!-- <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
         </tr>
